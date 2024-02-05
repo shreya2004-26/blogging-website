@@ -8,6 +8,7 @@ import Contact from './pages/Contact'
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import BlogDetails from './pages/BlogDetails';
+import FreeCourseDetails from './pages/FreeCourseDetails';
 
 const Router = createBrowserRouter(
   [{
@@ -24,7 +25,9 @@ const Router = createBrowserRouter(
     {
       path: '/contact', element: <Contact/>
     }, {
-      path:"/blog/:id",element:<BlogDetails/>
+      path:"/blog/details",element:<BlogDetails/>
+    }, {
+      path: "/freeCourse/details",element:<FreeCourseDetails/>
     }
   ]
 )

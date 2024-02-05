@@ -1,6 +1,32 @@
 import React from "react";
 import Image7 from "../assests/hacker.f25e50356cdf8d201cf7.png";
+import { useState } from "react";
 const Contacts = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const inputEvent = (event) => {
+    setName(event.target.value);
+  };
+  const inputEvent1 = (event) => {
+    setEmail(event.target.value);
+  };
+  const inputEvent2 = (event) => {
+    setPhone(event.target.value);
+  };
+  const inputEvent3 = (event) => {
+    setMessage(event.target.value);
+  };
+  const onSubmits = (event) => {
+    event.preventDefault();
+    // console.log(name, email, phone, message);
+    alert("Form Submitted");
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+  };
   return (
     <>
       <div className="twoContainers">
@@ -17,25 +43,35 @@ const Contacts = () => {
           </p>
         </div>
         <div className="formContainer">
-          <form>
+          <form onSubmit={onSubmits}>
             <div className="formContent">
               <div className="name1">FULL NAME</div>
-              <input type="text" />
+              <input type="text" value={name} onChange={inputEvent} />
             </div>
             <div className="formContent">
               <div className="name1">EMAIL</div>
-              <input type="email" />
+              <input
+                type="email"
+                value={email}
+                onChange={inputEvent1}
+                id="email"
+              />
             </div>
             <div className="formContent">
               <div className="name1">PHONE</div>
-              <input type="tel" />
+              <input type="tel" value={phone} onChange={inputEvent2} />
             </div>
             <div className="formContent">
               <div className="name1">MESSAGE</div>
-              <input type="text" className="text" />
+              <input
+                type="text"
+                className="text"
+                value={message}
+                onChange={inputEvent3}
+              />
             </div>
+            <button type="submit">Sign in</button>
           </form>
-          <button>Sign in</button>
         </div>
       </div>
     </>
