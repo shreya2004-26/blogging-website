@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import FreeCoursesDetailContainer from "../components/FreeCoursesDetailContainer";
 import { useLocation } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const FreeCourseDetails = () => {
   const location = useLocation();
@@ -42,6 +43,7 @@ const FreeCourseDetails = () => {
         link1Url={link1Url}
         link2Url={link2Url}
       />
+      <Footer />
     </>
   );
 };

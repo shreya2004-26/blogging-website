@@ -1,6 +1,7 @@
 import React from "react";
 import Contacts from "../components/Contacts";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import BlogDetailsContainer from "../components/BlogDetailsContainer";
 import FreeCoursesDetailContainer from "../components/FreeCoursesDetailContainer";
 const Contact = () => {
@@ -10,6 +11,7 @@ const Contact = () => {
       <Contacts />
       {/* <BlogDetailsContainer /> */}
       {/* <FreeCoursesDetailContainer /> */}
+      <Footer />
     </>
   );
 };
