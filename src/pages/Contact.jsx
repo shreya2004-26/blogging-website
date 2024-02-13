@@ -5,6 +5,9 @@ import Footer from "../components/Footer";
 import BlogDetailsContainer from "../components/BlogDetailsContainer";
 import FreeCoursesDetailContainer from "../components/FreeCoursesDetailContainer";
 const Contact = () => {
+  const element = document.getElementById("title");
+  element.innerText = "Contact | BlogWithShreya";
+
   return (
     <>
       <Header />

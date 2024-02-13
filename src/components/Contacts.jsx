@@ -43,7 +43,10 @@ const Contacts = () => {
           </p>
         </div>
         <div className="formContainer">
-          <form onSubmit={onSubmits}>
+          <form
+            onSubmit={onSubmits}
+            style={{ display: "flex", flexDirection: "column" }}
+          >
             <div className="formContent">
               <div className="name1">FULL NAME</div>
               <input type="text" value={name} onChange={inputEvent} />
@@ -70,7 +73,9 @@ const Contacts = () => {
                 onChange={inputEvent3}
               />
             </div>
-            <button type="submit">Sign in</button>
+            <button type="submit" style={{ alignSelf: "center" }}>
+              Sign in
+            </button>
           </form>
         </div>
       </div>

@@ -5,6 +5,9 @@ import { useLocation } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const FreeCourseDetails = () => {
+  const element = document.getElementById("title");
+  element.innerText = "FreeCoursesDetails | BlogWithShreya";
+
   const location = useLocation();
   console.log(location.state);
   const {
